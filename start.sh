@@ -368,7 +368,7 @@ main() {
     echo " "
 
     if [ -n "$STARTUP_CMD" ]; then
-        exec eval "$STARTUP_CMD"
+        eval "exec $STARTUP_CMD"
     else
         echo -e " ${COLORS[CYAN]}⚙${COLORS[RESET]} Tidak ada command. Masuk ke shell interaktif."
         echo ""
