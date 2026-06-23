@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates gnupg lsb-release \
     build-essential software-properties-common \
     tzdata iproute2 iputils-ping \
-    neofetch \
+    neofetch jq bc pciutils \
     # Chromium / Puppeteer / Playwright deps
     libgbm1 libnss3 libatk1.0-0 libatk-bridge2.0-0 \
     libcups2 libdrm2 libxkbcommon0 libxcomposite1 \
@@ -127,4 +127,3 @@ RUN chmod +x /start.sh
 WORKDIR /home/container
 
 CMD ["/bin/bash", "/start.sh"]
-
