@@ -1,0 +1,53 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2026-06-23T00:00:00+07:00",
+    "name": "DragoNodes AIO",
+    "author": "mafy@xiaocia.my.id",
+    "description": "NodeJS LTS, Java (OpenJDK) 21, Python 3.11+, Golang, .NET 8, Bun, pm2, yarn, pnpm, nodemon, Puppeteer, Playwright, FFmpeg, yt-dlp, Redis, MariaDB Client. Made by DragoNodes.",
+    "features": null,
+    "docker_images": {
+        "dragonodes/aio": "dragonodes/aio"
+    },
+    "file_denylist": [],
+    "startup": "bash /start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Menjalankan perintah startup\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/ash\necho 'DragoNodes AIO - Tidak ada instalasi diperlukan'\necho 'Semua runtime sudah tersedia di dalam image.'",
+            "container": "alpine:3.19",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Startup Command",
+            "description": "Perintah yang dijalankan setelah banner tampil. Contoh: node index.js, python3 main.py, java -jar server.jar",
+            "env_variable": "STARTUP_CMD",
+            "default_value": "bash",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required",
+            "field_type": "text"
+        },
+        {
+            "name": "Pesan Startup",
+            "description": "Pesan yang tampil di akhir banner sebelum server dijalankan.",
+            "env_variable": "STARTUP_MSG",
+            "default_value": "DragoNodes Client Siap. Menjalankan perintah startup...",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:200",
+            "field_type": "text"
+        }
+    ]
+}
+
